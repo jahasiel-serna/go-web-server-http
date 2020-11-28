@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: system-ui;
+                color: dimgrey;
+            }
+
+            .navigation {
+                width: 1000px;
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                box-shadow: 0px 0px 4px 0px #7d7d7d;
+                border-radius: 5px;
+            }
+
+            .navItem {
+                font-family: system-ui;
+                font-weight: 500;
+                text-decoration: none;
+                color: slategrey;
+            }
+
+            .navItem:hover {
+                color: dimgrey;
+            }
+
+            .students {
+                width: 1000px;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .studentForm {
+                width: 350px;
+                box-shadow: 0px 0px 4px 0px dimgrey;
+                border-radius: 5px;
+                padding: 10px;
+                height: fit-content;
+            }
+
+            input {
+                width: inherit;
+                box-sizing: border-box;
+                border: 1px solid lightgrey;
+                height: 2rem;
+                padding: 0 10px;
+                font-family: system-ui;
+                margin-bottom: 10px;
+                border-radius: 5px;
+            }
+
+            button {
+                background: white;
+                border: 2px solid dimgrey;
+                border-radius: 5px;
+                padding: 0.5rem 2rem;
+                font-family: system-ui;
+                color: dimgrey;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: dimgrey;
+                color: whitesmoke;
+            }
+
+            .studentsList {
+                width: 500px;
+            }
+
+            .studentsList div {
+                height: 30px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .studentsList div {
+                border-top: 1px solid dimgrey;
+            }
+
+            .studentsList div:hover {
+                background: lightgrey;
+            }
+
+            .listHeader {
+                font-weight: 500;
+                border-top: none !important;
+            }
+
+            .studentsList div span {
+                width: 150px;
+                text-align: center;
+            }
+
+            .studentsList div span:nth-child(2) {
+                width: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navigation">
+            <a class="navItem" href="/register">Registro</a>
+            <a class="navItem" href="/student">Promedio del alumno</a>
+            <a class="navItem" href="/general">Promedio general</a>
+            <a class="navItem" href="/course">Promedio por materia</a>
+        </nav>
+        <main class="students">
+            <form class="studentForm" action="/register" method="POST">
+                <input type="text" name="student" placeholder="Estudiante">
+                <input type="text" name="course" placeholder="Materia">
+                <input type="text" name="grade" placeholder="Calificacion">
+                <button type="submit">Registrar</button>
+            </form>
+            <div class="studentsList">
+                <div class="listHeader">
+                    <span>Estudiante</span>
+                    <span>Materia</span>
+                    <span>Calificacion</span>
+                </div>
+                %s
+            </div>
+        </main>
+    </body>
+</html>

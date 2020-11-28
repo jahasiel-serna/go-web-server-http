@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promedio general</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: system-ui;
+                color: dimgrey;
+            }
+
+            .navigation {
+                width: 1000px;
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                box-shadow: 0px 0px 4px 0px #7d7d7d;
+                border-radius: 5px;
+            }
+
+            .navItem {
+                font-family: system-ui;
+                font-weight: 500;
+                text-decoration: none;
+                color: slategrey;
+            }
+
+            .navItem:hover {
+                color: dimgrey;
+            }
+
+            .students {
+                width: 1000px;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .studentForm {
+                width: 350px;
+                box-shadow: 0px 0px 4px 0px dimgrey;
+                border-radius: 5px;
+                padding: 10px;
+                height: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navigation">
+            <a class="navItem" href="/register">Registro</a>
+            <a class="navItem" href="/student">Promedio del alumno</a>
+            <a class="navItem" href="/general">Promedio general</a>
+            <a class="navItem" href="/course">Promedio por materia</a>
+        </nav>
+        <main class="students">
+            <div class="studentForm">
+                <h3>Promedio general:<br>%.2f</h3>
+            </div>
+        </main>
+    </body>
+</html>

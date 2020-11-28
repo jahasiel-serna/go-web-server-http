@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promedio por materia</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: system-ui;
+                color: dimgrey;
+            }
+
+            .navigation {
+                width: 1000px;
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                box-shadow: 0px 0px 4px 0px #7d7d7d;
+                border-radius: 5px;
+            }
+
+            .navItem {
+                font-family: system-ui;
+                font-weight: 500;
+                text-decoration: none;
+                color: slategrey;
+            }
+
+            .navItem:hover {
+                color: dimgrey;
+            }
+
+            .students {
+                width: 1000px;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .studentForm {
+                width: 350px;
+                box-shadow: 0px 0px 4px 0px dimgrey;
+                border-radius: 5px;
+                padding: 10px;
+                height: fit-content;
+            }
+
+            select {
+                width: inherit;
+                box-sizing: border-box;
+                border: 1px solid lightgrey;
+                height: 2rem;
+                padding: 0 10px;
+                font-family: system-ui;
+                border-radius: 5px;
+            }
+
+            button {
+                background: white;
+                border: 2px solid dimgrey;
+                border-radius: 5px;
+                padding: 0.5rem 2rem;
+                font-family: system-ui;
+                color: dimgrey;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: dimgrey;
+                color: whitesmoke;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navigation">
+            <a class="navItem" href="/register">Registro</a>
+            <a class="navItem" href="/student">Promedio del alumno</a>
+            <a class="navItem" href="/general">Promedio general</a>
+            <a class="navItem" href="/course">Promedio por materia</a>
+        </nav>
+        <main class="students">
+            <form class="studentForm" action="/course" method="POST">
+                <select name="course">
+                    %s
+                </select>
+                <h3>Promedio: %.2f</h3>
+                <button type="submit">Consultar</button>
+            </form>
+        </main>
+    </body>
+</html>
